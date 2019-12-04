@@ -82,6 +82,6 @@ function createEmployeeRecords(resume) {
     return resume.map(item => createEmployeeRecord(item));
 }
 
-function findEmployeebyFirstName(employeeArray, employeeFun) {
+function findEmployeeByFirstName(employeeArray, employeeFun) {
     return employeeArray.find(emp => emp.firstName === employeeFun);
 }
