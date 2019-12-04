@@ -48,12 +48,12 @@ function createEmployeeRecord(array){
   }
   
   function hoursWorkedOnDate(record,date){
-    let startTime = record.timeInEvents.find(ele=>ele.date === date);
+    let startT = record.timeInEvents.find(ele=>ele.date === date);
     let EndTime = record.timeOutEvents.find(ele=>ele.date === date);
-    let startHour = startTime.hour.toString();
-    let endHour = EndTime.hour.toString();
-    let startH = startHour.length === 3 ? parseInt(startHour.substring(0,1)) :parseInt(startHour.substring(0,2));
-    let endH = endHour.length === 3 ? parseInt(endHour.substring(0,1)) : parseInt(endHour.substring(0,2));
+    let startH = startT.hour.toString();
+    let endH = EndTime.hour.toString();
+    let startH = startH.length === 3 ? parseInt(startH.substring(0,1)) :parseInt(startH.substring(0,2));
+    let endH = endH.length === 3 ? parseInt(endH.substring(0,1)) : parseInt(endH.substring(0,2));
     let sum = endH - startH;
     return sum;
   
@@ -69,7 +69,7 @@ function createEmployeeRecord(array){
     for(let i = 0; i < record.timeInEvents.length; i++){
       sum.push(wagesEarnedOnDate(record,record.timeInEvents[i].date));
     }
-    let final = sum.reduce((acc, cur) => acc + cur, 0);
+    let final = sum.reduce((H, A) => H + A, 0);
     return final;
   }
   
@@ -77,8 +77,8 @@ function createEmployeeRecord(array){
     return employeeArray.reduce((m, e) => m + allWagesFor(e), 0);
   }
   
-  function createEmployeeRecords(cvs){
-    return cvs.map(item=>createEmployeeRecord(item));
+  function createEmployeeRecords(resume){
+    return resume.map(item=>createEmployeeRecord(item));
   }
   
   function findEmployeeByFirstName(employeeArray,employeeFun){
