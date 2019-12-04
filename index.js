@@ -25,27 +25,27 @@ function createEmployees(sourceArray) {
 }
 
 function createTimeInEvent(obj, time) {
-    let obj = Object.assign({}, obj);
+    let obj1 = Object.assign({}, obj1);
     let timeParts = time.split(' ');
     let timeInObj = {
         type: "TimeIn",
         date: timeParts[0],
         hour: parseInt(timeParts[1])
     }
-    obj.timeInEvents.push(timeInObj);
-    return obj;
+    obj1.timeInEvents.push(timeInObj);
+    return obj1;
 }
 
 function createTimeOutEvent(obj, time) {
-    let obj = Object.assign({}, obj);
+    let obj2 = Object.assign({}, obj2);
     let timeParts = time.split(' ');
     let timeInObj = {
         type: "TimeOut",
         date: timeParts[0],
         hour: parseInt(timeParts[1])
     }
-    obj.timeOutEvents.push(timeInObj);
-    return obj;
+    obj2.timeOutEvents.push(timeInObj);
+    return obj2;
 }
 
 function hoursWorkedOnDate(record, date) {
