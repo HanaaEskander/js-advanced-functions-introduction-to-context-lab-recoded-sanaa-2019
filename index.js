@@ -81,6 +81,6 @@ function createEmployeeRecords(cvs){
   return cvs.map(item=>createEmployeeRecord(item));
 }
 
-function findEmployeebyFirstName(empArr,empFN){
+function findEmployeeByFirstName(empArr,empFN){
   return empArr.find(emp=>emp.firstName === empFN);
 }
