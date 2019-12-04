@@ -53,7 +53,7 @@ function hoursWorkedOnDate(record, date) {
     let end = record.timeOutEvents.find(emp => emp.date === date);
     let startH = start.hour.toString();
     let endH = end.hour.toString();
-    let startH = startH.length === 3 ? parseInt(startH.substring(0, 1)) : parseInt(startH.substring(0, 2));
+    let startHo = startHo.length === 3 ? parseInt(startHo.substring(0, 1)) : parseInt(startHo.substring(0, 2));
     let endHo = endHo.length === 3 ? parseInt(endHo.substring(0, 1)) : parseInt(endHo.substring(0, 2));
     let total = endHo - startH;
     return total;
