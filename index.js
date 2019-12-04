@@ -54,8 +54,8 @@ function hoursWorkedOnDate(record, date) {
     let startH = start.hour.toString();
     let endH = end.hour.toString();
     let startH = startH.length === 3 ? parseInt(startH.substring(0, 1)) : parseInt(startH.substring(0, 2));
-    let endH = endH.length === 3 ? parseInt(endH.substring(0, 1)) : parseInt(endH.substring(0, 2));
-    let total = endH - startH;
+    let endHo = endHo.length === 3 ? parseInt(endHo.substring(0, 1)) : parseInt(endHo.substring(0, 2));
+    let total = endHo - startH;
     return total;
 
 }
