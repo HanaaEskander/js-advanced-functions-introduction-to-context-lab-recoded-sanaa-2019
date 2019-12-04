@@ -52,8 +52,8 @@ function createEmployeeRecord(array){
     let EndTime = record.timeOutEvents.find(ele=>ele.date === date);
     let startH = startT.hour.toString();
     let endH = EndTime.hour.toString();
-    let startHo = startHo.length === 3 ? parseInt(startHo.substring(0,1)) :parseInt(startHo.substring(0,2));
-    let endHo = endHo.length === 3 ? parseInt(endHo.substring(0,1)) : parseInt(endHo.substring(0,2));
+    let startHo = startH.length === 3 ? parseInt(startH.substring(0,1)) :parseInt(startH.substring(0,2));
+    let endHo = endH.length === 3 ? parseInt(endH.substring(0,1)) : parseInt(endH.substring(0,2));
     let sum = endH - startH;
     return sum;
   
